@@ -1,0 +1,27 @@
+{
+  "name": "@e2fyi/serverless-py-template",
+  "version": "1.0.0",
+  "description": "Basic templates for AWS lambda function (python) with serverless framework",
+  "repository": "git@github.com:e2fyi/serverless-py-template.git",
+  "author": "eterna2 <eterna2@hotmail.com>",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "init": "npx env-cmd .env npm run init-aws",
+    "init-aws": "npx serverless config credentials --provider aws --key $AWS_KEY --secret $AWS_SECRET -o",
+    "deploy": "npx serverless deploy",
+    "deployf": "npx serverless deploy -f ",
+    "remove": "npx serverless remove",
+    "function": "npx serverless invoke --local -f ",
+    "api": "npx serverless invoke -f ",
+    "policy": "npx yo generator-serverless-policy"
+  },
+  "devDependencies": {
+    "env-cmd": "^7.0.0",
+    "generator-serverless-policy": "^1.7.0",
+    "serverless": "^1.23.0",
+    "serverless-python-requirements": "^3.0.10",
+    "yo": "^2.0.0"
+  },
+  "dependencies": {}
+}
